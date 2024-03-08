@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import ToastProvider from '@/providers/ToastProvider';
 import ModalProvider from '@/providers/ModalProvider';
+import Footer from '@/components/footer';
 
 const font = Urbanist({ subsets: ["latin"] });
 
@@ -21,8 +22,8 @@ export default function RootLayout({
       <body className={font.className}>
         <ToastProvider />
         <ModalProvider />
-
         {children}
+        <Footer />
       </body>
     </html>
   );
